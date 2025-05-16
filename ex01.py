@@ -1,74 +1,66 @@
-# listas
+lista = [1, 2, 3, 4, 5, 6]
 
-numeros = [5, 6, 7, 8]
-print(numeros)
+# len retorna o tamanho da lista
+print(len(lista))
 
-nomes = ["Ana", "João", "Leonardo"]
-print(nomes)
+#  max retorna o maior valor da lista
+print(max(lista))
 
-lista = []
+# min retorna o menor valor da lista
+print(min(lista))
+
+# palavras que comecam com letra maiuscula tem prioridade
+nomes = ["Paulo", "Julia", "Fer"]
+print(max(nomes))
+
+# sum retorna o somatorio da lista
+print(sum(lista))
+
+media = sum(lista) / len(lista)
+print(media)
+
+# append insere um item na lista
+lista =[1, 2, 3, 4]
+lista.append(100)
+print(lista)
+lista.append(200)
 print(lista)
 
-# indices começam do 0 e incrementam em uma unidade, utilizados para identificar uma posição na lista
-frutas = ["Morango", "Banana", "Goiaba"]
-print(frutas[0])
-
-# indices negativos começam pelo ultimo elemento
-cores = ["Amarelo", "Azul", "Laranja"]
-print(cores[-3])
-
-# alterar um item da lista
-lista = [3, 6, 19, 89]
-lista[0] = 100
+# insert (indice, num) insere um item em um indice especifico
+lista.insert(0, 300)
 print(lista)
 
-# inserir um item na lista
-lista = [3, 6, 19, 89]
-lista.append(500)
-lista.append(600)
+# pop remove um item de um indice da lista (se não colocar a posição ele remove o ultimo item)
+lista.pop(3)
 print(lista)
 
-# verificar tamanho de uma lista
-tamanho = len(lista)
-print(tamanho)
+# remove(item): remove o numero inserido
+lista.remove(2)
 
-# remover item da lista
-lista = [3, 6, 19, 89]
-lista.pop(0)
+# remover todos numeros iguais inseridos
+while 1 in lista:
+    lista.remove(1)
 print(lista)
 
-# preencher lista com entradas do usuario (tamanho fixo)
-listaNomes = []
-for i in range(5):
-    nome = input("Digite um nome: ")
-    listaNomes.append(nome)
-print(listaNomes)
+# index retorna o indice de um item na lista (se o valor for inexistente na lista retorna como erro)
+print(lista.index(4))
 
-# percorrer uma lista com entradas do usuario (tamanho indeterminado)
-listaNomes = []
-while True:
-    nome = input("Digite um nome: ")
-    if nome == "":
-        break
-    listaNomes.append(nome)
-print(listaNomes)
+# sort ordena  uma lista em ordem crescente
+lista1 = [1, 3, 5, 7, 9]
+lista1.sort()
+print(lista1)
 
-# percorrer os itens da lista
-lista = [3, 4, 5, 6]
-for item in lista:
-    print(item)
+# lista.sort(reverse=true) ordena uma lista em ordem decrescente
+lista2 = [4, 5, 8, 2, 10]
+lista2.sort(reverse=True)
+print(lista2)
 
-# contar a qtd de numeros impares na lista
-cont = 0
-for item in lista:
-    if item % 2 == 0:
-        cont += 1
-print(f"A qtd de impares é {cont}")
+# count conta quantas vezes um item aparece
+lista3 = [2, 2, 2, 2, 4, 5]
+print(lista3.count(2))
 
-# percorrer os indices da lista
-for i in range(len(lista)):
-    if lista[i] % 2 != 0:
-        lista[i] = 0
-print(lista)
-
-
+# concatenação de listas
+lista4 = [200, 300, 400]
+lista5 = [500, 600]
+lista6 = lista4 + lista5
+print(lista6)
