@@ -1,5 +1,6 @@
-import random
+n = int(input("Digite um numero: "))
+num = 0
 
-for n in range(20):
-    num = random.randint(1, 51)
+while num != n:
     print(num)
+    num += 1

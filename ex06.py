@@ -1,8 +1,9 @@
-nota = int(input("Digite uma nota entre 0 e 10: "))
+num = int(input("Digite um número: "))
+soma = 0
 
-while nota >= 10 or nota <= 0:
-    print("Digite uma nota válida!")
-    nota = int(input("Digite uma nota entre 0 e 10: "))
+while num != 0:
+    soma += num
+    num = int(input("Digite o número zero para sair: "))
+    print("Soma total:", soma)
 
-else:
-    print(f"Sua nota é: {nota}")
+

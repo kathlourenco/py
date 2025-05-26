@@ -1,5 +1,9 @@
-import math
-for n in range(1, 16):
-    num = int(input("Insira um número: "))
-    num2 = math.sqrt(num)
-    print(f"A raiz quadrada de {num} é igual a {num2}")
+usu = input("Digite o nome do seu usuario: ")
+senha = input("Digite sua senha: ")
+cont = 0
+
+while usu == senha:
+    print("Insira dados diferentes")
+    cont += 1
+    usu = input("Digite o nome do seu usuario: ")
+    senha = input("Digite sua senha: ")
