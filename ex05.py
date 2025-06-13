@@ -1,9 +1,11 @@
-usu = input("Digite o nome do seu usuario: ")
-senha = input("Digite sua senha: ")
-cont = 0
+def somatorio(lista):
+    soma = 0
+    for numero in lista:
+        try:
+            soma += numero
+        except TypeError:
+            print(f"Ignorando valor inválido: {numero}")
+    return soma
 
-while usu == senha:
-    print("Insira dados diferentes")
-    cont += 1
-    usu = input("Digite o nome do seu usuario: ")
-    senha = input("Digite sua senha: ")
+valores = [10, "a", 20, "xyz", 30]
+print(f"A soma dos valores é {somatorio(valores)}")
