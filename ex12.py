@@ -1,17 +1,9 @@
-soma = 0
-quantidade = 0
-nota = float(input("Digite uma nota (ou -1 para encerrar): "))
+import random
+lista = [random.randint(1, 10000) for i in range(10)]
+print(lista)
+num = int(input("Digite um número: "))
 
-while nota != -1:             # enquanto for diferente de -1
-    if 0 <= nota <= 10:       # se a nota for maior que zero e menor que 10
-        soma += nota          # soma a nota ao total
-        quantidade += 1
-    else:
-        print("Nota inválida.")
-    nota = float(input("Digite outra nota (ou -1 para encerrar): "))
-
-if quantidade > 0:
-    media = soma / quantidade
-    print("Média das notas:", media)
+if num in lista:
+    print(f"Este número aparece {lista.count(num)} vezes")
 else:
-    print("Nenhuma nota válida foi digitada.")
+    print("Este número não está na lista")

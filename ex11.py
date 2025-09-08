@@ -1,8 +1,14 @@
-num = int(input("Digite um numero positivo: "))
-cont = 0
+lista_nomes = []
+lista_idades = []
 
-while num > 0:
-    num = int(input("Digite um numero positivo: "))
-    cont += 1
+for i in range(10):
+    nome = input("Digite seu nome: ")
+    idade = int(input("Digite sua idade: "))
 
-print(f"Você digitou {cont} numero(s) positivo(s) ") 
+    lista_nomes.append(nome)
+    lista_idades.append(idade)
+
+print("Pessoas com mais de 18 anos:")
+for i in range(10):
+    if lista_idades[i] >= 18:
+        print(lista_nomes[i])

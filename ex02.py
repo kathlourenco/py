@@ -1,13 +1,11 @@
-def somar(a, b):
-    if type(a) == str or type(b) == str:
-        raise TypeError("Os valores devem ser numéricos")
-    c = a + b
-    print(f"Resultado: {c}")
-
-somar(10, 20)
-somar(2.5, 5.9)
-
-try:
-    somar("abc", "xyz")
-except TypeError as mensagem:
-    print(mensagem)
+def poligonos(lados):
+    if lados == 3:
+        print("triangulo")
+    elif lados == 4:
+        print("quadrilatro")
+    elif lados == 5:
+        print("pentagono")
+    else:
+        print("valor invalido")
+lados = int(input("Digite a quantidade de lados: "))
+poligonos(lados)

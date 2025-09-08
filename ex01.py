@@ -1,7 +1,11 @@
-def soma(*args):
-    print(args)
-    for a in args:
-        print(a)
-    return sum(args)
-print(f"soma: {soma(1, 2, 3)}")
-print(f"soma: {soma(4, 5, 6)}")
+def aprovacao(prova1, prova2):
+    media = (prova1 + prova2)/2
+    if media >= 6:
+        print("Voce foi aprovado")
+    else:
+        print("Voce foi reprovado")
+
+nota1 = int(input("Digite sua primeira nota de 0 a 10: "))
+nota2 = int(input("Digite sua primeira nota de 0 a 10: "))
+
+aprovacao(nota1, nota2)
